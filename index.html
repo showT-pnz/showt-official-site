@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP (Customized for showT)
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+	<head>
+		<title>showT Official Site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom tweaks for showT */
+			#banner {
+				background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/banner.jpg");
+				background-position: center;
+				background-size: cover;
+			}
+			.logo-text {
+				font-weight: 800;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+			}
+		</style>
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html" class="logo-text">showT</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="#one">About showT</a></li>
+											<li><a href="vault.html">VAULT. (App)</a></li>
+											<li><a href="https://ko-fi.com/your-id" target="_blank">Support on Ko-fi</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2 class="logo-text">showT</h2>
+							<p>Creating digital experiences<br />
+							that matter.</p>
+							<ul class="actions special">
+								<li><a href="vault.html" class="button primary">Check our Apps</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>showT - 次世代のデジタル体験を創造する</h2>
+								<p>私たちは、シンプルで美しく、そして実用的なアプリケーションを開発しています。<br />
+								あなたの日常を少しだけ豊かにするツールを、showTからお届けします。</p>
+							</header>
+							<ul class="icons major">
+								<li><span class="icon fa-gem major style1"><span class="label">Quality</span></span></li>
+								<li><span class="icon fa-heart major style2"><span class="label">Passion</span></span></li>
+								<li><span class="icon fa-code major style3"><span class="label">Tech</span></span></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two (Featured Project: VAULT.) -->
+					<section id="two" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/vault_screenshot.png" alt="VAULT. App Screenshot" /></div><div class="content">
+								<h2>VAULT.<br />
+								コレクション管理アプリ</h2>
+								<p>あなたの大切なコレクションを、美しく整理・管理しましょう。直感的な操作と洗練されたデザインで、収集の楽しさが広がります。</p>
+								<ul class="actions">
+									<li><a href="vault.html" class="button">詳細を見る</a></li>
+								</ul>
+							</div>
+						</section>
+					</section>
+
+				<!-- CTA -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>開発を支援する</h2>
+								<p>showTの活動をKo-fiでサポートしていただけます。皆さんの支援が新しいアプリの開発に繋がります。</p>
+							</header>
+							<ul class="actions stacked">
+								<li><a href="https://ko-fi.com/your-id" class="button fit primary">Ko-fiで支援</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; showT</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/gh/ajlkn/skel/dist/skel.min.js"></script>
+			<!-- Note: In a real environment, I'd include the full assets/js files. 
+			     For now, this provides a basic functional structure. -->
+			<script>
+				(function($) {
+					$(function() {
+						var	$window = $(window),
+							$body = $('body');
+						$body.addClass('is-preload');
+						$window.on('load', function() {
+							window.setTimeout(function() {
+								$body.removeClass('is-preload');
+							}, 100);
+						});
+						$('.menuToggle').on('click', function(event) {
+							event.preventDefault();
+							$('#menu').toggleClass('visible');
+						});
+						$('#menu').on('click', 'a', function(event) {
+							$('#menu').removeClass('visible');
+						});
+					});
+				})(jQuery);
+			</script>
+
+	</body>
+</html>

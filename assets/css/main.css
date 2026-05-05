@@ -1,0 +1,84 @@
+/* Simple Spectral-like CSS for local testing and GitHub Pages */
+body {
+    margin: 0;
+    padding: 0;
+    background: #2e3842;
+    color: #fff;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+a { color: #21b2a6; text-decoration: none; }
+h1, h2, h3, h4 { color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+
+#header {
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(46, 56, 66, 0.9);
+}
+#header h1 a { font-size: 1.5em; letter-spacing: 0.2em; }
+
+#banner {
+    padding: 10em 2em;
+    text-align: center;
+    background-color: #2e3842;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#banner h2 { font-size: 3em; margin-bottom: 0.5em; }
+
+.wrapper { padding: 4em 2em; }
+.style1 { background: #21b2a6; }
+.style2 { background: #2e3842; }
+.style3 { background: #4e5a65; }
+.style4 { background: #2e3842; padding: 6em 2em; text-align: center; }
+.style5 { background: #fff; color: #444; }
+.style5 h1, .style5 h2, .style5 h3, .style5 h4 { color: #444; }
+
+.inner { max-width: 800px; margin: 0 auto; }
+
+.button {
+    display: inline-block;
+    padding: 0.75em 2em;
+    border-radius: 5px;
+    background: #21b2a6;
+    color: #fff;
+    font-weight: 800;
+    transition: 0.3s;
+}
+.button.primary { background: #ed4933; }
+.button:hover { opacity: 0.8; }
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(46, 56, 66, 0.95);
+    z-index: 2000;
+    transition: 0.3s;
+    padding: 2em;
+}
+#menu.visible { right: 0; }
+#menu ul { list-style: none; padding: 0; }
+#menu li { margin: 1em 0; }
+#menu a { color: #fff; font-size: 1.2em; }
+
+#footer { padding: 4em 2em; text-align: center; background: #1d242a; }
+#footer ul { list-style: none; display: flex; justify-content: center; padding: 0; }
+#footer li { margin: 0 1em; }
+
+.spotlight { display: flex; align-items: center; margin-bottom: 2em; }
+.spotlight .image { flex: 1; padding: 1em; }
+.spotlight .image img { width: 100%; border-radius: 5px; }
+.spotlight .content { flex: 1; padding: 1em; }
+
+@media screen and (max-width: 736px) {
+    .spotlight { flex-direction: column; text-align: center; }
+}

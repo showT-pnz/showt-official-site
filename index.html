@@ -9,19 +9,28 @@
 		<title>showT Official Site</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="images/logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			/* Custom tweaks for showT */
 			#banner {
-				background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/banner.jpg");
+				background-color: #2e3842;
+				background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/banner.jpg"), linear-gradient(45deg, #2e3842 0%, #21b2a6 100%);
 				background-position: center;
 				background-size: cover;
+				background-attachment: fixed;
 			}
 			.logo-text {
 				font-weight: 800;
 				letter-spacing: 0.2em;
 				text-transform: uppercase;
+			}
+			.spotlight .image img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 			}
 		</style>
 	</head>

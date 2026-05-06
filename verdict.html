@@ -10,12 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			#header {
-				background: #1a3a5c;
-				padding: 0.35em 1.5em;
-			}
+			#header { background: #1a3a5c; padding: 0.35em 1.5em; }
 			#header h1 { font-size: 0.95em; }
 			article#main { margin-top: 2em; }
 			#main > header {
@@ -30,15 +28,26 @@
 				text-align: center;
 				margin-top: 2em;
 			}
-			.button.primary {
-				background: #2a6faa;
+			.btn-verdict-dl {
+				background: #1a4a80;
 				border-color: #2a6faa;
 				color: #fff;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.6em;
+				padding: 0.9em 2.5em;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 0.2em;
+				font-size: 0.9em;
+				border: 1px solid #2a6faa;
+				transition: all 0.35s;
 			}
-			.button.primary:hover {
-				background: #4a9eda;
+			.btn-verdict-dl:hover {
+				background: #2a6faa;
 				border-color: #4a9eda;
-				box-shadow: 0 0 20px rgba(74,158,218,0.4);
+				color: #fff;
+				box-shadow: 0 0 25px rgba(42,111,170,0.5);
 			}
 		</style>
 	</head>
@@ -101,10 +110,14 @@
 								<div class="download-box">
 									<h4>Android版をダウンロード</h4>
 									<p>Google Playストアを通さない直接配布版（APK）です。</p>
-									<ul class="actions special" style="justify-content:center; display:flex;">
-										<li><a href="#" class="button primary large">APKをダウンロード</a></li>
-									</ul>
-									<p><small>※近日公開予定</small></p>
+									<div style="margin:1.5em 0;">
+										<a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0-verdict/verdict-v1.0.0.apk"
+										   class="btn-verdict-dl">
+											<i class="fa-solid fa-download"></i>
+											APKをダウンロード
+										</a>
+									</div>
+									<p><small>※インストール時に「不明なアプリ」の警告が出ますが、許可して進めてください。</small></p>
 								</div>
 
 							</div>
@@ -113,13 +126,32 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons" style="display:flex; justify-content:center; gap:2em;">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright" style="display:flex; justify-content:center; gap:1em; margin-top:1em;">
-							<li>&copy; showT</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<div class="social-footer">
+							<div class="social-buttons">
+								<a href="#" class="social-btn" target="_blank" title="X (Twitter)">
+									<i class="fa-brands fa-x-twitter"></i>
+									<span>X</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Instagram">
+									<i class="fa-brands fa-instagram"></i>
+									<span>Instagram</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<span>Facebook</span>
+								</a>
+								<a href="mailto:shoma.ponzu@gmail.com" class="social-btn" title="Email">
+									<i class="fa-solid fa-envelope"></i>
+									<span>Email</span>
+								</a>
+							</div>
+							<a href="https://ko-fi.com/showt" class="kofi-btn" target="_blank">
+								<i class="fa-solid fa-mug-hot"></i>
+								Support on Ko-fi
+							</a>
+						</div>
+						<ul class="copyright" style="justify-content:center;">
+							<li>&copy; showT</li>
 						</ul>
 					</footer>
 
@@ -148,6 +180,9 @@
 						$('#menu').on('click', 'a', function() {
 							$('#menu').removeClass('visible');
 						});
+						// Apply saved device mode
+						var mode = localStorage.getItem('showt-device');
+						if (mode) $body.addClass('mode-' + mode);
 					});
 				})(jQuery);
 			</script>

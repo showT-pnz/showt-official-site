@@ -11,13 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/png" href="images/logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Custom tweaks for showT Luxury Theme */
 			#banner {
 				background-color: #0a0a0a;
-				background-image: 
-					linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+				background-image:
+					linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
 					radial-gradient(ellipse at center, #1b1b1b 0%, #0a0a0a 100%);
 				background-position: center;
 				background-size: cover;
@@ -25,7 +25,7 @@
 			}
 			.logo-text {
 				font-weight: 300;
-				letter-spacing: 0.3em; /* Slightly reduced to prevent clipping */
+				letter-spacing: 0.3em;
 				text-transform: uppercase;
 				color: #d4af37;
 			}
@@ -36,18 +36,13 @@
 				box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 				border: 1px solid #d4af3722;
 			}
-			#header h1 a {
-				color: #d4af37;
-				font-weight: 400;
-				letter-spacing: 0.2em; /* Prevent clipping */
-			}
+			#header h1 a { color: #d4af37; font-weight: 400; letter-spacing: 0.2em; }
 			.menuToggle {
 				text-decoration: none;
 				color: #d4af37 !important;
 				border-bottom: 1px solid #d4af3744;
 				padding-bottom: 2px;
 			}
-			/* Prevent clipping on mobile */
 			@media screen and (max-width: 480px) {
 				.logo-text { letter-spacing: 0.1em; font-size: 1.2em; }
 				#header h1 a { letter-spacing: 0.1em; }
@@ -55,6 +50,29 @@
 		</style>
 	</head>
 	<body class="landing is-preload">
+
+		<!-- Device Selector Overlay -->
+		<div id="device-selector">
+			<div class="ds-inner">
+				<div class="ds-logo">showT</div>
+				<div class="ds-sub">Select your experience</div>
+				<div class="ds-options">
+					<button class="ds-btn" onclick="selectDevice('desktop')">
+						<i class="fa-solid fa-display"></i>
+						<span class="ds-title">Desktop</span>
+						<span class="ds-sub2">Full layout</span>
+					</button>
+					<button class="ds-btn" onclick="selectDevice('mobile')">
+						<i class="fa-solid fa-mobile-screen-button"></i>
+						<span class="ds-title">Mobile</span>
+						<span class="ds-sub2">Optimized</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Switch version button -->
+		<button class="ds-switch" onclick="resetDevice()">Switch version</button>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -72,7 +90,7 @@
 											<li><a href="index.html">Home</a></li>
 											<li><a href="#one">About</a></li>
 											<li><a href="vault.html">VAULT.</a></li>
-									<li><a href="verdict.html">VERDICT.</a></li>
+											<li><a href="verdict.html">VERDICT.</a></li>
 											<li><a href="https://ko-fi.com/showt" target="_blank">Support</a></li>
 										</ul>
 									</div>
@@ -88,6 +106,7 @@
 							<p style="color: #d4af37; letter-spacing: 0.1em; font-style: italic;">Aesthetics of Digital Collection.</p>
 							<ul class="actions special">
 								<li><a href="vault.html" class="button primary">Enter the VAULT.</a></li>
+								<li><a href="verdict.html" class="button verdict-btn">Enter VERDICT.</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Discovery</a>
@@ -101,11 +120,22 @@
 								<p>私たちは、単なるツールではなく「作品」としてのアプリケーションを追求します。<br />
 								洗練されたデザインと妥協のない機能性が、あなたのデジタルライフに品位をもたらします。</p>
 							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major" style="color: #d4af37;"><span class="label">Quality</span></span></li>
-								<li><span class="icon fa-crown major" style="color: #d4af37;"><span class="label">Luxury</span></span></li>
-								<li><span class="icon fa-code major" style="color: #d4af37;"><span class="label">Artistry</span></span></li>
-							</ul>
+							<div class="pillars">
+								<div class="pillar">
+									<i class="fa-solid fa-gem"></i>
+									<span class="pillar-label">Quality</span>
+								</div>
+								<div class="pillar-divider"></div>
+								<div class="pillar">
+									<i class="fa-solid fa-crown"></i>
+									<span class="pillar-label">Luxury</span>
+								</div>
+								<div class="pillar-divider"></div>
+								<div class="pillar">
+									<i class="fa-solid fa-code"></i>
+									<span class="pillar-label">Artistry</span>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -131,7 +161,7 @@
 								借金を、制御する。</h2>
 								<p>ローン・クレジット・個人間の借貸をシンプルに一元管理。返済期限・残高・件数をひと目で把握し、家計の透明性を高めるアプリです。</p>
 								<ul class="actions">
-									<li><a href="verdict.html" class="button primary">View VERDICT.</a></li>
+									<li><a href="verdict.html" class="button verdict-btn">View VERDICT.</a></li>
 								</ul>
 							</div>
 						</section>
@@ -152,13 +182,32 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; showT</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<div class="social-footer">
+							<div class="social-buttons">
+								<a href="#" class="social-btn" target="_blank" title="X (Twitter)">
+									<i class="fa-brands fa-x-twitter"></i>
+									<span>X</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Instagram">
+									<i class="fa-brands fa-instagram"></i>
+									<span>Instagram</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<span>Facebook</span>
+								</a>
+								<a href="mailto:shoma.ponzu@gmail.com" class="social-btn" title="Email">
+									<i class="fa-solid fa-envelope"></i>
+									<span>Email</span>
+								</a>
+							</div>
+							<a href="https://ko-fi.com/showt" class="kofi-btn" target="_blank">
+								<i class="fa-solid fa-mug-hot"></i>
+								Support on Ko-fi
+							</a>
+						</div>
+						<ul class="copyright" style="justify-content:center;">
+							<li>&copy; showT</li>
 						</ul>
 					</footer>
 
@@ -167,9 +216,28 @@
 		<!-- Scripts -->
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 			<script>
+				// Device selector
+				function selectDevice(mode) {
+					localStorage.setItem('showt-device', mode);
+					document.body.classList.remove('mode-desktop', 'mode-mobile');
+					document.body.classList.add('mode-' + mode);
+					document.getElementById('device-selector').classList.add('hidden');
+				}
+				function resetDevice() {
+					localStorage.removeItem('showt-device');
+					document.getElementById('device-selector').classList.remove('hidden');
+				}
+				(function() {
+					var saved = localStorage.getItem('showt-device');
+					if (saved) {
+						document.body.classList.add('mode-' + saved);
+						document.getElementById('device-selector').classList.add('hidden');
+					}
+				})();
+
 				(function($) {
 					$(function() {
-						var	$window = $(window),
+						var $window = $(window),
 							$body = $('body');
 						$body.addClass('is-preload');
 						$window.on('load', function() {

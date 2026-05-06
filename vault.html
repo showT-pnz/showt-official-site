@@ -10,12 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			#header {
-				background: #2e3842;
-				padding: 0.35em 1.5em;
-			}
+			#header { background: #2e3842; padding: 0.35em 1.5em; }
 			#header h1 { font-size: 0.95em; }
 			article#main { margin-top: 2em; }
 			#main > header { padding: 2.5em 2em 2em; }
@@ -89,8 +87,10 @@
 								<div class="download-box">
 									<h4>Android版をダウンロード</h4>
 									<p>Google Playストアを通さない直接配布版（APK）です。</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0/vault-v1.0.0.apk" class="button primary large icon solid fa-download">APKをダウンロード</a></li>
+									<ul class="actions special" style="justify-content:center; display:flex;">
+										<li><a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0/vault-v1.0.0.apk" class="button primary large">
+											<i class="fa-solid fa-download" style="margin-right:0.5em;"></i>APKをダウンロード
+										</a></li>
 									</ul>
 									<p><small>※インストール時に「不明なアプリ」の警告が出ますが、許可して進めてください。</small></p>
 								</div>
@@ -101,13 +101,32 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; showT</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<div class="social-footer">
+							<div class="social-buttons">
+								<a href="#" class="social-btn" target="_blank" title="X (Twitter)">
+									<i class="fa-brands fa-x-twitter"></i>
+									<span>X</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Instagram">
+									<i class="fa-brands fa-instagram"></i>
+									<span>Instagram</span>
+								</a>
+								<a href="#" class="social-btn" target="_blank" title="Facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<span>Facebook</span>
+								</a>
+								<a href="mailto:shoma.ponzu@gmail.com" class="social-btn" title="Email">
+									<i class="fa-solid fa-envelope"></i>
+									<span>Email</span>
+								</a>
+							</div>
+							<a href="https://ko-fi.com/showt" class="kofi-btn" target="_blank">
+								<i class="fa-solid fa-mug-hot"></i>
+								Support on Ko-fi
+							</a>
+						</div>
+						<ul class="copyright" style="justify-content:center;">
+							<li>&copy; showT</li>
 						</ul>
 					</footer>
 
@@ -118,7 +137,7 @@
 			<script>
 				(function($) {
 					$(function() {
-						var	$window = $(window),
+						var $window = $(window),
 							$body = $('body');
 						$body.addClass('is-preload');
 						$window.on('load', function() {
@@ -136,6 +155,9 @@
 						$('#menu').on('click', 'a', function() {
 							$('#menu').removeClass('visible');
 						});
+						// Apply saved device mode
+						var mode = localStorage.getItem('showt-device');
+						if (mode) $body.addClass('mode-' + mode);
 					});
 				})(jQuery);
 			</script>

@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP (Customized for showT)
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="ja">
 	<head>
 		<title>VERDICT. - showT</title>
@@ -51,139 +46,141 @@
 				color: #fff;
 				box-shadow: 0 0 25px rgba(42,111,170,0.5);
 			}
+			.app-screenshots {
+				display: flex;
+				gap: 1.5em;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-bottom: 2em;
+			}
+			.app-screenshots img {
+				width: 220px;
+				border-radius: 16px;
+				box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+				border: 1px solid #2a6faa44;
+			}
+			@media screen and (max-width: 736px) {
+				.app-screenshots img { width: min(220px, 78vw); }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
-
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html" class="header-back">&#8592;</a><a href="index.html">showT</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<button id="menu-close">&#215;</button>
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="vault.html">VAULT.</a></li>
-											<li><a href="verdict.html">VERDICT.</a></li>
-											<li><a href="https://ko-fi.com/showt" target="_blank">Support</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<article id="main">
-						<header>
-							<h2>VERDICT.</h2>
-							<p>借金を、制御する。</p>
-						</header>
-						<section class="wrapper style5">
-							<div class="inner">
-
-								<h3>借金・ローンをシンプルに一元管理。</h3>
-								<p>VERDICT.は、ローン・クレジットカード・個人間の借貸など、あらゆる負債を一か所にまとめて管理できるアプリです。返済期限の通知・残高の推移・件数サマリーをひと目で把握し、家計の透明性を取り戻します。</p>
-
-								<hr />
-
-								<h4>スクリーンショット</h4>
-								<div style="display:flex; gap:1.5em; flex-wrap:wrap; justify-content:center; margin-bottom:2em;">
-									<img src="images/debt_screenshot.png" alt="VERDICT. メイン画面"
-										style="width:220px; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.7); border:1px solid #2a6faa44;" />
-								</div>
-
-								<hr />
-
-								<h4>主な機能</h4>
-								<ul style="list-style:disc; padding-left:1.5em;">
-									<li>借金・ローンの登録と残高管理</li>
-									<li>今月の返済額・期限間近の件数を一覧表示</li>
-									<li>銀行口座・収入の記録</li>
-									<li>カレンダーで返済スケジュールを確認</li>
+		<div id="page-wrapper">
+			<header id="header">
+				<h1><a href="index.html" class="header-back">&#8592;</a><a href="index.html">showT</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<button id="menu-close">&#215;</button>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="vault.html">VAULT.</a></li>
+									<li><a href="verdict.html">VERDICT.</a></li>
+									<li><a href="https://ko-fi.com/showt" target="_blank">Support</a></li>
 								</ul>
-
-								<div class="download-box">
-									<h4>Android版をダウンロード</h4>
-									<p>Google Playストアを通さない直接配布版（APK）です。</p>
-									<div style="margin:1.5em 0;">
-										<a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0-verdict/verdict-v1.0.0.apk"
-										   class="btn-verdict-dl">
-											<i class="fa-solid fa-download"></i>
-											APKをダウンロード
-										</a>
-									</div>
-									<p><small>※インストール時に「不明なアプリ」の警告が出ますが、許可して進めてください。</small></p>
-								</div>
-
 							</div>
-						</section>
-					</article>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="social-footer">
-							<div class="social-buttons">
-								<a href="https://x.com/showT_official" class="social-btn" target="_blank" title="X (Twitter)">
-									<i class="fa-brands fa-x-twitter"></i>
-									<span>X</span>
-								</a>
-								<a href="https://www.instagram.com/showt_original/" class="social-btn" target="_blank" title="Instagram">
-									<i class="fa-brands fa-instagram"></i>
-									<span>Instagram</span>
-								</a>
-								<a href="mailto:yelan.gyoza@gmail.com" class="social-btn" title="Email">
-									<i class="fa-solid fa-envelope"></i>
-									<span>Email</span>
-								</a>
-							</div>
-							<a href="https://ko-fi.com/showt" class="kofi-btn" target="_blank">
-								<i class="fa-solid fa-mug-hot"></i>
-								Support on Ko-fi
-							</a>
+			<article id="main">
+				<header>
+					<h2>VERDICT.</h2>
+					<p>負債を、制御する。</p>
+				</header>
+				<section class="wrapper style5">
+					<div class="inner">
+						<h3>借金・ローンをシンプルに一元管理。</h3>
+						<p>VERDICT.は、ローン、クレジットカード、個人間の借貸など、あらゆる負債を一か所にまとめて管理できるアプリです。返済期限の通知、残高の推移、件数サマリーをひと目で把握し、家計の透明性を取り戻します。</p>
+
+						<hr />
+
+						<h4>スクリーンショット</h4>
+						<div class="app-screenshots">
+							<img src="images/debt_screenshot.png" alt="VERDICT. メイン画面" />
 						</div>
-						<ul class="copyright" style="justify-content:center;">
-							<li>&copy; showT</li>
+
+						<hr />
+
+						<h4>主な機能</h4>
+						<ul>
+							<li>借金・ローンの登録と残高管理</li>
+							<li>今月の返済額、期限間近の件数を一覧表示</li>
+							<li>銀行口座・収入の記録</li>
+							<li>カレンダーで返済スケジュールを確認</li>
 						</ul>
-					</footer>
 
-			</div>
+						<div class="download-box">
+							<h4>Android版をダウンロード</h4>
+							<p>Google Playストアを通さない直接配布版（APK）です。</p>
+							<div style="margin:1.5em 0;">
+								<a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0-verdict/verdict-v1.0.0.apk" class="btn-verdict-dl">
+									<i class="fa-solid fa-download"></i>
+									APKをダウンロード
+								</a>
+							</div>
+							<p><small>※インストール時に「不明なアプリ」の警告が出ますが、許可して進めてください。</small></p>
+						</div>
+					</div>
+				</section>
+			</article>
 
-		<!-- Scripts -->
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script>
-				(function($) {
-					$(function() {
-						var $window = $(window),
-							$body = $('body');
-						$body.addClass('is-preload');
-						$window.on('load', function() {
-							window.setTimeout(function() {
-								$body.removeClass('is-preload');
-							}, 100);
-						});
-						$('.menuToggle').on('click', function(event) {
-							event.preventDefault();
-							$('#menu').toggleClass('visible');
-						});
-						$('#menu-close').on('click', function() {
-							$('#menu').removeClass('visible');
-						});
-						$('#menu').on('click', 'a', function() {
-							$('#menu').removeClass('visible');
-						});
-						// Apply saved device mode
-						var mode = localStorage.getItem('showt-device');
-						if (mode) $body.addClass('mode-' + mode);
+			<footer id="footer">
+				<div class="social-footer">
+					<div class="social-buttons">
+						<a href="https://x.com/showT_official" class="social-btn" target="_blank" title="X (Twitter)">
+							<i class="fa-brands fa-x-twitter"></i>
+							<span>X</span>
+						</a>
+						<a href="https://www.instagram.com/showt_original/" class="social-btn" target="_blank" title="Instagram">
+							<i class="fa-brands fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+						<a href="mailto:yelan.gyoza@gmail.com" class="social-btn" title="Email">
+							<i class="fa-solid fa-envelope"></i>
+							<span>Email</span>
+						</a>
+					</div>
+					<a href="https://ko-fi.com/showt" class="kofi-btn" target="_blank">
+						<i class="fa-solid fa-mug-hot"></i>
+						Support on Ko-fi
+					</a>
+				</div>
+				<ul class="copyright" style="justify-content:center;">
+					<li>&copy; showT</li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			(function($) {
+				$(function() {
+					var $window = $(window),
+						$body = $('body');
+					$body.addClass('is-preload');
+					$window.on('load', function() {
+						window.setTimeout(function() {
+							$body.removeClass('is-preload');
+						}, 100);
 					});
-				})(jQuery);
-			</script>
-
+					$('.menuToggle').on('click', function(event) {
+						event.preventDefault();
+						$('#menu').toggleClass('visible');
+					});
+					$('#menu-close').on('click', function() {
+						$('#menu').removeClass('visible');
+					});
+					$('#menu').on('click', 'a', function() {
+						$('#menu').removeClass('visible');
+					});
+					var mode = localStorage.getItem('showt-device');
+					if (mode) $body.addClass('mode-' + mode);
+				});
+			})(jQuery);
+		</script>
 	</body>
 </html>

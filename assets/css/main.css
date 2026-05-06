@@ -4,11 +4,16 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background: #0a0a0a; /* Deep Obsidian */
     color: #e0e0e0;
     font-family: "Optima", "Georgia", serif;
     background-image: radial-gradient(circle at 2px 2px, #1a1a1a 1px, transparent 0);
     background-size: 40px 40px;
+}
+
+html, #page-wrapper {
+    overflow-x: hidden;
 }
 a { color: #d4af37; text-decoration: none; transition: 0.3s; }
 a:hover { color: #f9e29b; }
@@ -398,8 +403,102 @@ body.mode-mobile .inner { padding: 0 0.5em; }
 body.mode-mobile .social-buttons { gap: 0.5em; }
 body.mode-mobile .social-btn { padding: 1em 1.1em; min-width: 58px; }
 body.mode-mobile .spotlight .content { padding: 1.5em; }
+body.mode-mobile article#main { margin-top: 0; }
+body.mode-mobile #main > header {
+    padding: 7.5em 1.25em 3.25em;
+}
+body.mode-mobile #main > header h2 {
+    font-size: 2.25em;
+    letter-spacing: 0.18em;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+body.mode-mobile #main > header p {
+    font-size: 0.7em;
+    letter-spacing: 0.16em;
+    line-height: 1.8;
+}
+body.mode-mobile #header {
+    padding: 0.7em 1em;
+}
+body.mode-mobile #header h1 a {
+    font-size: 1.05em;
+    letter-spacing: 0.18em;
+}
+body.mode-mobile #menu {
+    right: -86vw;
+    width: 86vw;
+    max-width: 300px;
+}
+body.mode-mobile #menu.visible {
+    right: 0;
+}
+body.mode-mobile .download-box {
+    padding: 1.5em 1em;
+}
 
 @media screen and (max-width: 736px) {
+    body {
+        overflow-x: hidden;
+    }
+    #header {
+        padding: 0.7em 1em !important;
+    }
+    #header h1 {
+        min-width: 0;
+    }
+    #header h1 a {
+        font-size: 1.05em !important;
+        letter-spacing: 0.18em !important;
+    }
+    .header-back {
+        font-size: 1.05em;
+        padding-right: 0.5em;
+    }
+    article#main {
+        margin-top: 0 !important;
+    }
+    #main > header {
+        padding: 7.5em 1.25em 3.25em !important;
+    }
+    #main > header h2 {
+        font-size: 2.25em;
+        letter-spacing: 0.18em;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+    #main > header p {
+        font-size: 0.7em;
+        letter-spacing: 0.16em;
+        line-height: 1.8;
+    }
+    .wrapper {
+        padding-left: 1.1em;
+        padding-right: 1.1em;
+    }
+    .inner {
+        width: 100%;
+        padding: 0;
+    }
+    #menu {
+        right: -86vw;
+        width: 86vw;
+        max-width: 300px;
+    }
+    #menu.visible {
+        right: 0;
+    }
+    .download-box {
+        padding: 1.5em 1em;
+    }
+    .button,
+    .btn-verdict-dl,
+    .kofi-btn {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+        justify-content: center;
+    }
     .spotlight { flex-direction: column; text-align: center; }
     .ds-options { flex-direction: column; align-items: center; }
     .ds-btn { min-width: 260px; padding: 2.5em; }

@@ -191,7 +191,8 @@ a.more, a.more::before, a.more::after { display: none !important; }
 }
 
 /* ── Banner: vertical stack buttons ── */
-#banner .actions.special { flex-direction: column; align-items: center; gap: 1em; }
+#banner .actions.special { flex-direction: column; align-items: center; gap: 0; }
+#banner .actions.special li:last-child { margin-top: 2em; }
 
 /* ── VERDICT dark blue button ── */
 .button.verdict-btn {
@@ -267,7 +268,13 @@ a.more, a.more::before, a.more::after { display: none !important; }
     text-decoration: none;
     transition: all 0.35s;
     min-width: 68px;
+    min-height: 72px;
     border-radius: 3px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(212,175,55,0.15);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 .social-btn i { font-size: 1.4em; }
 .social-btn span { font-size: 0.52em; letter-spacing: 0.22em; text-transform: uppercase; }
@@ -292,6 +299,11 @@ a.more, a.more::before, a.more::after { display: none !important; }
     text-transform: uppercase;
     transition: all 0.35s;
     border-radius: 2px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(212,175,55,0.15);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 .kofi-btn:hover {
     background: #d4af37;
@@ -377,7 +389,7 @@ a.more, a.more::before, a.more::after { display: none !important; }
 body.mode-mobile .spotlight { flex-direction: column !important; text-align: center; }
 body.mode-mobile .spotlight .image { width: 100% !important; max-width: 280px; margin: 0 auto; }
 body.mode-mobile .wrapper { padding: 3.5em 1.2em; }
-body.mode-mobile #banner { padding: 7em 1.5em 5em; }
+body.mode-mobile #banner { padding: 10em 1.5em 5em; }
 body.mode-mobile #banner h2 { font-size: 2.2em; letter-spacing: 0.25em; }
 body.mode-mobile .pillars { flex-direction: column; }
 body.mode-mobile .pillar { padding: 1.5em 0; }

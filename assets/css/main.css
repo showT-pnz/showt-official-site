@@ -40,6 +40,23 @@ h1, h2, h3, h4 {
 }
 #header h1 a { font-size: 1.5em; letter-spacing: 0.4em; color: #d4af37; }
 
+.menuToggle {
+    color: #d4af37 !important;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.45em 0.2em;
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1;
+    touch-action: manipulation;
+}
+.menuToggle span {
+    display: inline-block;
+}
+
 #banner {
     padding: 12em 2em;
     text-align: center;
@@ -425,6 +442,12 @@ body.mode-mobile #header h1 a {
     font-size: 1.05em;
     letter-spacing: 0.18em;
 }
+body.mode-mobile .menuToggle {
+    min-height: 48px;
+    font-size: 1.25em;
+    letter-spacing: 0.16em;
+    padding: 0.5em 0.1em;
+}
 body.mode-mobile #menu {
     right: -86vw;
     width: 86vw;
@@ -450,6 +473,12 @@ body.mode-mobile .download-box {
     #header h1 a {
         font-size: 1.05em !important;
         letter-spacing: 0.18em !important;
+    }
+    .menuToggle {
+        min-height: 48px;
+        font-size: 1.25em;
+        letter-spacing: 0.16em;
+        padding: 0.5em 0.1em;
     }
     .header-back {
         font-size: 1.05em;

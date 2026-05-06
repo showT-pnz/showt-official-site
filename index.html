@@ -13,24 +13,44 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Custom tweaks for showT */
+			/* Custom tweaks for showT Luxury Theme */
 			#banner {
-				background-color: #2e3842;
-				background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/banner.jpg"), linear-gradient(45deg, #2e3842 0%, #21b2a6 100%);
+				background-color: #0a0a0a;
+				background-image: 
+					linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+					radial-gradient(ellipse at center, #1b1b1b 0%, #0a0a0a 100%);
 				background-position: center;
 				background-size: cover;
 				background-attachment: fixed;
 			}
 			.logo-text {
-				font-weight: 800;
-				letter-spacing: 0.2em;
+				font-weight: 300;
+				letter-spacing: 0.3em; /* Slightly reduced to prevent clipping */
 				text-transform: uppercase;
+				color: #d4af37;
 			}
 			.spotlight .image img {
 				max-width: 100%;
 				height: auto;
-				border-radius: 10px;
-				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+				border-radius: 0;
+				box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+				border: 1px solid #d4af3722;
+			}
+			#header h1 a {
+				color: #d4af37;
+				font-weight: 400;
+				letter-spacing: 0.2em; /* Prevent clipping */
+			}
+			.menuToggle {
+				text-decoration: none;
+				color: #d4af37 !important;
+				border-bottom: 1px solid #d4af3744;
+				padding-bottom: 2px;
+			}
+			/* Prevent clipping on mobile */
+			@media screen and (max-width: 480px) {
+				.logo-text { letter-spacing: 0.1em; font-size: 1.2em; }
+				#header h1 a { letter-spacing: 0.1em; }
 			}
 		</style>
 	</head>
@@ -45,13 +65,15 @@
 						<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle" style="text-decoration: none; color: #d4af37;"><span>目録</span></a>
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
+										<button id="menu-close">&#215;</button>
 										<ul>
-											<li><a href="index.html">トップ</a></li>
-											<li><a href="#one">制作理念</a></li>
-											<li><a href="vault.html">作品：VAULT.</a></li>
-											<li><a href="https://ko-fi.com/showt" target="_blank">パトロン（支援）</a></li>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="#one">About</a></li>
+											<li><a href="vault.html">VAULT.</a></li>
+									<li><a href="verdict.html">VERDICT.</a></li>
+											<li><a href="https://ko-fi.com/showt" target="_blank">Support</a></li>
 										</ul>
 									</div>
 								</li>
@@ -59,32 +81,30 @@
 						</nav>
 					</header>
 
-
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
 							<h2 class="logo-text">showT</h2>
-							<p>Creating digital experiences<br />
-							that matter.</p>
+							<p style="color: #d4af37; letter-spacing: 0.1em; font-style: italic;">Aesthetics of Digital Collection.</p>
 							<ul class="actions special">
-								<li><a href="vault.html" class="button primary">Check our Apps</a></li>
+								<li><a href="vault.html" class="button primary">Enter the VAULT.</a></li>
 							</ul>
 						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+						<a href="#one" class="more scrolly">Discovery</a>
 					</section>
 
 				<!-- One -->
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>showT - 次世代のデジタル体験を創造する</h2>
-								<p>私たちは、シンプルで美しく、そして実用的なアプリケーションを開発しています。<br />
-								あなたの日常を少しだけ豊かにするツールを、showTからお届けします。</p>
+								<h2>showT - 美学と技術の融合</h2>
+								<p>私たちは、単なるツールではなく「作品」としてのアプリケーションを追求します。<br />
+								洗練されたデザインと妥協のない機能性が、あなたのデジタルライフに品位をもたらします。</p>
 							</header>
 							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Quality</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Passion</span></span></li>
-								<li><span class="icon fa-code major style3"><span class="label">Tech</span></span></li>
+								<li><span class="icon fa-gem major" style="color: #d4af37;"><span class="label">Quality</span></span></li>
+								<li><span class="icon fa-crown major" style="color: #d4af37;"><span class="label">Luxury</span></span></li>
+								<li><span class="icon fa-code major" style="color: #d4af37;"><span class="label">Artistry</span></span></li>
 							</ul>
 						</div>
 					</section>
@@ -92,12 +112,26 @@
 				<!-- Two (Featured Project: VAULT.) -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/vault_screenshot.png" alt="VAULT. App Screenshot" /></div><div class="content">
+							<div class="image"><img src="images/vault_screenshot.jpg" alt="VAULT. App Screenshot" /></div><div class="content">
 								<h2>VAULT.<br />
-								コレクション管理アプリ</h2>
-								<p>あなたの大切なコレクションを、美しく整理・管理しましょう。直感的な操作と洗練されたデザインで、収集の楽しさが広がります。</p>
+								コレクションの聖域</h2>
+								<p>あなたの大切な宝物を、その価値にふさわしい美しい空間で。VAULT.は、所有することの悦びを最大化するために設計された、至高のコレクション管理アプリです。</p>
 								<ul class="actions">
-									<li><a href="vault.html" class="button">詳細を見る</a></li>
+									<li><a href="vault.html" class="button primary">Enter the VAULT.</a></li>
+								</ul>
+							</div>
+						</section>
+					</section>
+
+				<!-- Three (Featured Project: VERDICT.) -->
+					<section class="wrapper style3">
+						<section class="spotlight" style="flex-direction:row-reverse;">
+							<div class="image"><img src="images/debt_screenshot.png" alt="VERDICT. Screenshot" /></div><div class="content">
+								<h2>VERDICT.<br />
+								借金を、制御する。</h2>
+								<p>ローン・クレジット・個人間の借貸をシンプルに一元管理。返済期限・残高・件数をひと目で把握し、家計の透明性を高めるアプリです。</p>
+								<ul class="actions">
+									<li><a href="verdict.html" class="button primary">View VERDICT.</a></li>
 								</ul>
 							</div>
 						</section>
@@ -107,11 +141,11 @@
 					<section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
-								<h2>開発を支援する</h2>
-								<p>showTの活動をKo-fiでサポートしていただけます。皆さんの支援が新しいアプリの開発に繋がります。</p>
+								<h2>パトロンとして支援する</h2>
+								<p>showTの活動をKo-fiでサポートしていただけます。あなたの支援が、次なる「作品」の礎となります。</p>
 							</header>
 							<ul class="actions stacked">
-								<li><a href="https://ko-fi.com/your-id" class="button fit primary">Ko-fiで支援</a></li>
+								<li><a href="https://ko-fi.com/showt" class="button fit primary">Ko-fiで支援</a></li>
 							</ul>
 						</div>
 					</section>
@@ -132,9 +166,6 @@
 
 		<!-- Scripts -->
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/gh/ajlkn/skel/dist/skel.min.js"></script>
-			<!-- Note: In a real environment, I'd include the full assets/js files. 
-			     For now, this provides a basic functional structure. -->
 			<script>
 				(function($) {
 					$(function() {
@@ -150,7 +181,10 @@
 							event.preventDefault();
 							$('#menu').toggleClass('visible');
 						});
-						$('#menu').on('click', 'a', function(event) {
+						$('#menu-close').on('click', function() {
+							$('#menu').removeClass('visible');
+						});
+						$('#menu').on('click', 'a', function() {
 							$('#menu').removeClass('visible');
 						});
 					});

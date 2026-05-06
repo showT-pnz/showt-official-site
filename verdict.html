@@ -6,25 +6,39 @@
 -->
 <html lang="ja">
 	<head>
-		<title>VAULT. - showT</title>
+		<title>VERDICT. - showT</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#header {
-				background: #2e3842;
+				background: #1a3a5c;
 				padding: 0.35em 1.5em;
 			}
 			#header h1 { font-size: 0.95em; }
 			article#main { margin-top: 2em; }
-			#main > header { padding: 2.5em 2em 2em; }
+			#main > header {
+				padding: 2.5em 2em 2em;
+				background: linear-gradient(180deg, #050a12, #0a0a0a);
+			}
+			#main > header h2 { color: #4a9eda; }
 			.download-box {
 				background: rgba(255,255,255,0.05);
 				padding: 2em;
 				border-radius: 10px;
 				text-align: center;
 				margin-top: 2em;
+			}
+			.button.primary {
+				background: #2a6faa;
+				border-color: #2a6faa;
+				color: #fff;
+			}
+			.button.primary:hover {
+				background: #4a9eda;
+				border-color: #4a9eda;
+				box-shadow: 0 0 20px rgba(74,158,218,0.4);
 			}
 		</style>
 	</head>
@@ -57,42 +71,40 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>VAULT.</h2>
-							<p>究極のコレクション管理アプリ</p>
+							<h2>VERDICT.</h2>
+							<p>借金を、制御する。</p>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>大切なコレクションを、一つの場所に。</h3>
-								<p>VAULT.は、フィギュア、カード、本、ゲームなど、あらゆるコレクションを一括管理するためのアプリです。高画質な画像保存と詳細なデータ入力により、あなたの宝物をデジタル化します。</p>
+								<h3>借金・ローンをシンプルに一元管理。</h3>
+								<p>VERDICT.は、ローン・クレジットカード・個人間の借貸など、あらゆる負債を一か所にまとめて管理できるアプリです。返済期限の通知・残高の推移・件数サマリーをひと目で把握し、家計の透明性を取り戻します。</p>
 
 								<hr />
 
 								<h4>スクリーンショット</h4>
 								<div style="display:flex; gap:1.5em; flex-wrap:wrap; justify-content:center; margin-bottom:2em;">
-									<img src="images/vault_screenshot.jpg" alt="VAULT. ホーム画面"
-										style="width:220px; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.7); border:1px solid #d4af3733;" />
-									<img src="images/vault_screenshot2.jpg" alt="VAULT. アイテム一覧"
-										style="width:220px; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.7); border:1px solid #d4af3733;" />
+									<img src="images/debt_screenshot.png" alt="VERDICT. メイン画面"
+										style="width:220px; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.7); border:1px solid #2a6faa44;" />
 								</div>
 
 								<hr />
 
 								<h4>主な機能</h4>
-								<ul>
-									<li>グループ・シリーズ別の階層管理</li>
-									<li>レア度・価格・所持数の記録</li>
-									<li>クラウド同期（Firebase連携）</li>
-									<li>美しいブラック×ゴールドのUI</li>
+								<ul style="list-style:disc; padding-left:1.5em;">
+									<li>借金・ローンの登録と残高管理</li>
+									<li>今月の返済額・期限間近の件数を一覧表示</li>
+									<li>銀行口座・収入の記録</li>
+									<li>カレンダーで返済スケジュールを確認</li>
 								</ul>
 
 								<div class="download-box">
 									<h4>Android版をダウンロード</h4>
 									<p>Google Playストアを通さない直接配布版（APK）です。</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/showT-pnz/showt-official-site/releases/download/v1.0.0/vault-v1.0.0.apk" class="button primary large icon solid fa-download">APKをダウンロード</a></li>
+									<ul class="actions special" style="justify-content:center; display:flex;">
+										<li><a href="#" class="button primary large">APKをダウンロード</a></li>
 									</ul>
-									<p><small>※インストール時に「不明なアプリ」の警告が出ますが、許可して進めてください。</small></p>
+									<p><small>※近日公開予定</small></p>
 								</div>
 
 							</div>
@@ -101,12 +113,12 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons">
+						<ul class="icons" style="display:flex; justify-content:center; gap:2em;">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-						<ul class="copyright">
+						<ul class="copyright" style="display:flex; justify-content:center; gap:1em; margin-top:1em;">
 							<li>&copy; showT</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
@@ -118,7 +130,7 @@
 			<script>
 				(function($) {
 					$(function() {
-						var	$window = $(window),
+						var $window = $(window),
 							$body = $('body');
 						$body.addClass('is-preload');
 						$window.on('load', function() {

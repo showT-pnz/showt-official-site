@@ -1,4 +1,6 @@
 /* Obsidian & Gold Luxury Theme */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
     margin: 0;
     padding: 0;
@@ -112,14 +114,81 @@ h1, h2, h3, h4 {
     background: rgba(255,255,255,0.02);
     border: 1px solid #d4af3711;
 }
-.spotlight .image { flex: 1; overflow: hidden; }
-.spotlight .image img { 
-    width: 100%; 
+.spotlight .image {
+    flex: 0 0 auto;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    overflow: hidden;
+}
+.spotlight .image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
     display: block;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #d4af3722;
     transition: transform 0.6s ease;
 }
-.spotlight:hover .image img { transform: scale(1.05); }
+.spotlight:hover .image img { transform: scale(1.03); }
 .spotlight .content { flex: 1; padding: 3em; }
+
+/* Nuke any stray list bullets */
+ul, ol { list-style: none; padding-left: 0; margin: 0; }
+
+/* Hide Discovery scroll link entirely */
+a.more, a.more::before, a.more::after { display: none !important; }
+
+/* Menu close button */
+#menu-close {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 1.6em;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    padding: 0;
+}
+#menu-close:hover { opacity: 1; }
+
+/* Header back button */
+.header-back {
+    color: #d4af37;
+    font-size: 1.5em;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.3s, color 0.3s;
+    padding: 0 0.3em 0 0;
+}
+.header-back:hover { opacity: 1; color: #f9e29b; }
+
+/* Vault app name hero */
+#main > header {
+    padding: 7em 2em 3em;
+    text-align: center;
+    background: linear-gradient(180deg, #050505, #0a0a0a);
+    border-bottom: 1px solid #d4af3733;
+}
+#main > header h2 {
+    font-size: 4em;
+    letter-spacing: 0.6em;
+    margin: 0 0 0.3em;
+}
+#main > header p {
+    font-size: 0.85em;
+    letter-spacing: 0.35em;
+    color: #d4af3799;
+    margin: 0;
+    font-style: italic;
+}
 
 @media screen and (max-width: 736px) {
     .spotlight { flex-direction: column; text-align: center; }
